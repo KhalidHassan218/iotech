@@ -17,7 +17,7 @@ export const HeroSlider = ({ slides, strapiUrl }: HeroSliderProps) => {
         if (slide.backgroundType === "image" && slide.backgroundImage) {
           const promise = new Promise<void>((resolve) => {
             const img = new window.Image();
-            img.src = `${strapiUrl}${slide.backgroundImage?.url}`;
+            img.src = `${slide.backgroundImage?.url}`;
             img.onload = () => {
               setLoadedMedia((prev) => new Set(prev).add(index));
               resolve();
@@ -31,7 +31,7 @@ export const HeroSlider = ({ slides, strapiUrl }: HeroSliderProps) => {
         if (slide.backgroundType === "video" && slide.backgroundVideo) {
           const promise = new Promise<void>((resolve) => {
             const video = document.createElement("video");
-            video.src = `${strapiUrl}${slide.backgroundVideo?.url}`;
+            video.src = `${slide.backgroundVideo?.url}`;
             video.preload = "auto";
             video.onloadeddata = () => {
               setLoadedMedia((prev) => new Set(prev).add(index));
@@ -45,7 +45,7 @@ export const HeroSlider = ({ slides, strapiUrl }: HeroSliderProps) => {
         if (slide.foregroundImage) {
           const promise = new Promise<void>((resolve) => {
             const img = new window.Image();
-            img.src = `${strapiUrl}${slide.foregroundImage?.url}`;
+            img.src = `${slide.foregroundImage?.url}`;
             img.onload = () => resolve();
             img.onerror = () => resolve();
           });
@@ -139,7 +139,7 @@ export const HeroSlider = ({ slides, strapiUrl }: HeroSliderProps) => {
                   className="object-cover"
                   priority={index === 0}
                   quality={75}
-                  src={`${strapiUrl}${slide.backgroundImage.url}`}
+                  src={`${slide.backgroundImage.url}`}
                   unoptimized={strapiUrl.includes("localhost")}
                 />
               </div>
@@ -165,7 +165,7 @@ export const HeroSlider = ({ slides, strapiUrl }: HeroSliderProps) => {
                   className="w-full h-full object-cover"
                 >
                   <source
-                    src={`${strapiUrl}${slide.backgroundVideo.url}`}
+                    src={`${slide.backgroundVideo.url}`}
                     type={slide.backgroundVideo.mime}
                   />
                 </video>
@@ -240,7 +240,7 @@ export const HeroSlider = ({ slides, strapiUrl }: HeroSliderProps) => {
                 className="object-contain drop-shadow-2xl"
                 quality={75}
                 sizes="(max-width: 640px) 90vw, (max-width: 768px) 80vw, (max-width: 1024px) 50vw, 40vw"
-                src={`${strapiUrl}${currentSlideData.foregroundImage.url}`}
+                src={`${currentSlideData.foregroundImage.url}`}
                 unoptimized={strapiUrl.includes("localhost")}
               />
             </div>
