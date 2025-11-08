@@ -1,0 +1,39 @@
+{
+  "Header": {
+    "nav": {
+      "home": "Home",
+      "services": "Services",
+      "about": "About",
+      "contact": "Contact"
+    },
+    "services": {
+      "legalConsultation": "Legal Consultation Services",
+      "foreignInvestment": "Foreign Investment Services",
+      "contracts": "Contracts",
+      "notarization": "Notarization",
+      "insurance": "Insurance",
+      "defenseCases": "Defense and Representation in All Cases",
+      "banksFinancial": "Banks and Financial Institutions",
+      "corporateGovernance": "Corporate Governance Services",
+      "companiesLiquidation": "Companies Liquidation",
+      "internalRegulations": "Internal Regulations for Companies",
+      "companyServices": "Services for Companies and Institutions",
+      "arbitration": "Arbitration",
+      "intellectualProperty": "Intellectual Property",
+      "corporateRestructuring": "Corporate Restructuring and Reorganization",
+      "establishingCompanies": "Establishing National and Foreign Companies",
+      "commercialAgencies": "Commercial Agencies",
+      "vision2030": "Supporting Vision 2030",
+      "estates": "Estates"
+    },
+    "search": {
+      "placeholder": "Search..."
+    },
+    "button": {
+      "book": "Book Appointment"
+    },
+    "localeSwitcher": {
+      "locale": "{locale}"
+    }
+  }
+}

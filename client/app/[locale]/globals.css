@@ -1,0 +1,74 @@
+@import "tailwindcss";
+
+/* Root styles - Brown theme (default) */
+:root {
+  --color-background: #4B2615;
+  --color-foreground: #ededed;
+  --color-section-light: #FBFBFB;
+  --color-section-medium: #F3F3F3;
+  --color-accent: #4B2615;
+  --color-text-on-light: #4B2615;
+  --color-text-on-dark: #ffffff;
+  --font-dm-sans: var(--font-geist-sans), sans-serif;
+}
+
+@theme {
+  --color-background: #4B2615;
+  --color-foreground: #ededed;
+  --color-section-light: #FBFBFB;
+  --color-section-medium: #F3F3F3;
+  --color-accent: #4B2615;
+  --color-text-on-light: #4B2615;
+  --color-text-on-dark: #ffffff;
+  --font-dm-sans: var(--font-geist-sans), sans-serif;
+}
+
+@custom-variant white (&:is(.white *));
+@theme white {
+  --color-background: #ffffff;
+  --color-foreground: #171717;
+  --color-section-light: #FBFBFB;
+  --color-section-medium: #F3F3F3;
+  --color-accent: #4B2615;
+  --color-text-on-light: #4B2615;
+  --color-text-on-dark: #ffffff;
+}
+
+@custom-variant dark (&:is(.dark *));
+@theme dark {
+  --color-background: #0a0a0a;
+  --color-foreground: #e6e6e6;
+  --color-section-light: #1a1a1a;
+  --color-section-medium: #2a2a2a;
+  --color-accent: #4B2615;
+  --color-text-on-light: #4B2615;
+  --color-text-on-dark: #ffffff;
+}
+
+body {
+  @apply bg-background text-foreground font-sans;
+}
+
+.bg-faded {
+  background-color: color-mix(in srgb, var(--color-accent) 10%, transparent);
+}
+
+.section-light {
+  background-color: var(--color-section-light);
+}
+
+.section-medium {
+  background-color: var(--color-section-medium);
+}
+
+.text-accent {
+  color: var(--color-accent);
+}
+
+.text-on-light {
+  color: var(--color-text-on-light);
+}
+
+.text-on-dark {
+  color: var(--color-text-on-dark);
+}

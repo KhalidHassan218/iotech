@@ -1,0 +1,18 @@
+{
+  "kind": "collectionType",
+  "collectionName": "team_services",
+  "info": {
+    "singularName": "team-service",
+    "pluralName": "team-services",
+    "displayName": "Team Service"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Title": {
+      "type": "string"
+    }
+  }
+}
