@@ -10,13 +10,15 @@ const nextConfig: NextConfig = {
     position: "bottom-right",
   },
   images: {
-    qualities: [75, 90],
+    domains: [],
     remotePatterns: [
       {
+        protocol: "https",
+        hostname: "**",
+      },
+      {
         protocol: "http",
-        hostname: "localhost",
-        port: "1337",
-        pathname: '/uploads/**',
+        hostname: "**",
       },
     ],
   },
